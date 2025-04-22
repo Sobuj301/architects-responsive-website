@@ -9,10 +9,15 @@
   }
 
 /* share styles */
+
   .display-flex{
     display: flex;
   }
 
+
+.text-primary{
+  color: #FF900E;
+}
 .dark-1{
     color:#131313 ;
 }
@@ -29,7 +34,6 @@
 }
 
 
-
 /* nav item */
 
   .item{
@@ -43,9 +47,15 @@
     align-items: center;
   }
 
-  .navbar, .banner{
+  .navbar, .banner,main,footer{
     max-width: 1440px;
     margin: 0 auto;
+  }
+
+  .navlink{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2rem;
   }
 
 
@@ -89,11 +99,217 @@
   }
 
 
+  /* featured */
 
+  .featured{
+    align-items: center;
+    gap: 50px;
+    margin-top:70px;
+    margin-bottom: 70px;
+  }
+  .featured-img{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  }
+
+.featured-text{
+  max-width: 537px;
+}
+  .featured-title{
+     font-weight: 700;
+     font-size: 3rem;
+  }
+  #quick-list{
+    font-weight: 500;
+  }
+
+  /* featured enjoy style */
+
+  .featured-enjoy{
+    gap: 140px;
+  }
+  .featured-enjoy-title{
+    border-left: 10px solid #FF900E;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 2.50rem;
+    margin-bottom: 5px;
+  }
+
+  .featured-card{
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  }
+
+  .featured-enjoy-img{
+    width: 100%;
+  }
+
+  .experience-badge{
+    padding: 40px 40px;
+    background-color: #FF900E;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    margin-left: -100px;
+    margin-top: -100px;
+  }
+
+  .experience-year{
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  .experience{
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+
+  /* fact section style */
+
+ 
+  .fact-title{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+  .fact-description{
+    max-width: 540px;
+  }
+
+
+  /* fact style */
+  .fact-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+
+  .fact-card{
+    border: 1px solid #FF900E;
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .fact-number{
+    font-weight: 600;
+    font-size: 2.25rem;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+
+
+  /* Our Sponsor Style Related */
+
+  .sponsor-heading{
+    max-width: 550px;
+    margin: 0px auto;
+    text-align: center;
+  }
+  .sponsor-title{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+
+  .sponsor-description{
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .sponsor-img{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 60px;
+    gap: 50px;
+    filter: brightness(0%)
+  }
+  /* .sponsor-img img{
+    width: 100%;
+  } */
+
+  /* footer */
+  .footer{
+    text-align: center;
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .footer-content{
+    font-weight: 400;
+    font-size: 1rem;
+  }
   /* mobile device */
 
 @media screen and (max-width:576px) {
-    .navbar,.navlinks{
+    .navbar,
+    .navlinks,
+    .featured,
+    .featured-enjoy
+    {
         flex-direction: column;
     }
+    .featured-img{
+      grid-template-columns: repeat(1,1fr);
+    }
+    .featured{
+      gap: 2px;
+    }
+    .featured-text{
+      margin-left: 30px;
+    }
+    .experience-badge{
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .featured-enjoy{
+      gap: 10px;
+    }
+
+    .fact-container{
+      grid-template-columns: 1fr;
+      gap: 50px;
+      margin-bottom: 20px;
+      margin-left: 40px;
+    }
+    .sponsor-img{
+      grid-template-columns: repeat(1,1fr);
+      gap: 30px;
+
+    }
+ 
+}
+
+@media screen and (min-width:576px) and (max-width:990px) {
+  .featured,.featured-enjoy{
+    flex-direction: column;
+    gap: 5px;
+  }
+  .experience-badge{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .fact-container{
+    grid-template-columns: repeat(2,1fr);
+     gap: 40px;
+    
+  }
+  .fact-card{
+    width: 80%;
+    
+  }
+  .sponsor-img{
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 30px;
+  }
 }
